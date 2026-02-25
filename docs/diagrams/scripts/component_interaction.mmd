@@ -1,0 +1,76 @@
+sequenceDiagram
+    participant U as User/Script
+    participant AR as AgentRunner
+    participant SA as SLMAgent
+    participant SE as StateEncoder
+    participant M as Model
+    participant E as DemoWebEnv
+    participant BS as BrowserSession
+    participant TR as TrajectoryRecorder
+    
+    Note over U,TR: Initialization Phase
+    U->>AR: Create runner(agent, env)
+    AR->>SA: Initialize agent
+    SA->>M: Load checkpoint
+    AR->>E: Initialize environment
+    E->>BS: Create browser session
+    AR->>TR: Initialize recorder
+    
+    Note over U,TR: Episode Execution
+    U->>AR: run_episode(task, url, max_steps)
+    AR->>E: reset(url)
+    E->>BS: page.goto(url)
+    BS-->>E: Success
+    E-->>AR: initial_state
+    
+    loop For each step (max_steps)
+        Note over AR,TR: Observation Phase
+        AR->>E: get_state()
+        E->>BS: get_accessibility_tree()
+        BS-->>E: DOM elements
+        E-->>AR: state_dict
+        
+        Note over AR,TR: Decision Phase
+        AR->>SA: act(state)
+        SA->>SE: encode(state)
+        SE-->>SA: encoded_tensor
+        SA->>M: forward(tensor)
+        M-->>SA: action_logits
+        SA->>SA: sample_action()
+        SA-->>AR: action
+        
+        Note over AR,TR: Execution Phase
+        AR->>E: step(action)
+        E->>E: validate_action()
+        E->>BS: execute_action()
+        
+        alt Action: CLICK
+            BS->>BS: page.click(target)
+        else Action: TYPE
+            BS->>BS: page.fill(target, value)
+        else Action: SCROLL
+            BS->>BS: page.evaluate(scroll)
+        else Action: GO_BACK
+            BS->>BS: page.go_back()
+        end
+        
+        BS-->>E: action_result
+        E->>E: compute_reward()
+        E-->>AR: next_state, reward, done
+        
+        Note over AR,TR: Recording Phase
+        AR->>TR: record_transition()
+        TR->>TR: validate_schema()
+        TR->>TR: append_to_trajectory()
+        
+        alt Episode Done
+            AR->>AR: break
+        end
+    end
+    
+    Note over U,TR: Cleanup Phase
+    AR->>TR: save_trajectory()
+    TR-->>AR: trajectory.json
+    AR->>E: close()
+    E->>BS: close_browser()
+    AR-->>U: EpisodeResult

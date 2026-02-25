@@ -1,0 +1,71 @@
+graph TB
+    subgraph "Input Processing"
+        State[State Input<br/>URL + DOM elements]
+        URLEnc[URL Encoder<br/>Tokenize URL]
+        DOMEnc[DOM Encoder<br/>Element features]
+        
+        State --> URLEnc
+        State --> DOMEnc
+    end
+    
+    subgraph "Embedding Layer"
+        URLTok[URL Tokens<br/>bert-base-uncased]
+        DOMTok[DOM Tokens<br/>tag + text + attributes]
+        PosEnc[Positional Encoding]
+        
+        URLEnc --> URLTok
+        DOMEnc --> DOMTok
+        DOMTok --> PosEnc
+    end
+    
+    subgraph "BERT Encoder"
+        BertEmb[BERT Embeddings<br/>768-dim]
+        BertLayers[12 Transformer Layers<br/>Self-attention + FFN]
+        ContextVec[Contextual Vectors<br/>Per token]
+        
+        URLTok --> BertEmb
+        PosEnc --> BertEmb
+        BertEmb --> BertLayers
+        BertLayers --> ContextVec
+    end
+    
+    subgraph "Pooling"
+        Pool[Mean Pooling<br/>Aggregate contexts]
+        StateRep[State Representation<br/>768-dim vector]
+        
+        ContextVec --> Pool
+        Pool --> StateRep
+    end
+    
+    subgraph "Action Heads"
+        TypeHead[Action Type Head<br/>Linear → 7 classes<br/>CLICK, TYPE, etc.]
+        TargetHead[Target Head<br/>Linear → Element index]
+        ValueHead[Value Head<br/>Linear + Projection<br/>Text for TYPE]
+        
+        StateRep --> TypeHead
+        StateRep --> TargetHead
+        StateRep --> ValueHead
+    end
+    
+    subgraph "Output"
+        TypeLogits[Type Logits<br/>Softmax]
+        TargetLogits[Target Logits<br/>Softmax]
+        ValueLogits[Value Logits<br/>Greedy decode]
+        
+        TypeHead --> TypeLogits
+        TargetHead --> TargetLogits
+        ValueHead --> ValueLogits
+    end
+    
+    subgraph "Action Construction"
+        Action[Final Action<br/>type + target + value]
+        
+        TypeLogits --> Action
+        TargetLogits --> Action
+        ValueLogits --> Action
+    end
+    
+    style State fill:#e1f5ff
+    style BertLayers fill:#99ccff
+    style StateRep fill:#ff9999
+    style Action fill:#99ff99

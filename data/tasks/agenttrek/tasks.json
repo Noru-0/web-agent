@@ -1,0 +1,104 @@
+{
+  "tasks": [
+    {
+      "task_id": "task_3417aa1d67b4",
+      "name": "search content",
+      "description": "Search for articles or news",
+      "related_actions": [
+        "dd7d5098dcbc"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "d23e9a65ce4d7f7b",
+        "9cd6dc0adb83d1bc"
+      ],
+      "priority": "initial",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 2
+      }
+    },
+    {
+      "task_id": "task_24f8665ef948",
+      "name": "read article",
+      "description": "Read article or content",
+      "related_actions": [
+        "2f08c7880f8d",
+        "8f5426fe61e4",
+        "5fdfc2029202"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "974b9c0ffea89551",
+        "39ab2072d3afd368",
+        "9cd6dc0adb83d1bc",
+        "42737ac264e08d6a"
+      ],
+      "priority": "intermediate",
+      "meta": {
+        "action_count": 3,
+        "screen_count": 4
+      }
+    },
+    {
+      "task_id": "task_ae3413beb5ce",
+      "name": "select actions",
+      "description": "Perform select-related actions",
+      "related_actions": [
+        "046fe22e19eb",
+        "7e070cbde6ba"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "d23e9a65ce4d7f7b"
+      ],
+      "priority": "intermediate",
+      "meta": {
+        "action_count": 2,
+        "screen_count": 1
+      }
+    },
+    {
+      "task_id": "task_4acf3e9771e2",
+      "name": "book actions",
+      "description": "Perform book-related actions",
+      "related_actions": [
+        "c426ea0b0a1b"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "974b9c0ffea89551",
+        "39ab2072d3afd368",
+        "42737ac264e08d6a"
+      ],
+      "priority": "intermediate",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 3
+      }
+    },
+    {
+      "task_id": "task_469a955ae284",
+      "name": "download actions",
+      "description": "Perform download-related actions",
+      "related_actions": [
+        "6a8e719178d3"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "39ab2072d3afd368",
+        "42737ac264e08d6a"
+      ],
+      "priority": "terminal",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 2
+      }
+    }
+  ],
+  "meta": {
+    "total_screens": 5,
+    "total_actions": 14,
+    "unique_actions": 8
+  }
+}

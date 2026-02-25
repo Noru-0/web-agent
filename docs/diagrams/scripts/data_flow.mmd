@@ -1,0 +1,69 @@
+graph LR
+    subgraph "Input: Explorer Data"
+        WT[WebTactix Logs<br/>JSON format]
+        AT[AgentTrek Logs<br/>Custom format]
+        Other[Other Explorers<br/>Various formats]
+    end
+    
+    subgraph "Adapter Layer"
+        WTA[WebTactixAdapter]
+        ATA[AgentTrekAdapter]
+        OA[Custom Adapters]
+        
+        WT --> WTA
+        AT --> ATA
+        Other --> OA
+    end
+    
+    subgraph "Unified Format"
+        Schema[schema.py<br/>Trajectory<br/>- states<br/>- actions<br/>- metadata]
+        
+        WTA --> Schema
+        ATA --> Schema
+        OA --> Schema
+    end
+    
+    subgraph "Training Data"
+        DS[TrajectoryDataset<br/>Load trajectories]
+        Encode[StateEncoder<br/>- URL encoding<br/>- DOM encoding<br/>- Action encoding]
+        Batch[DataLoader<br/>Batch collation]
+        
+        Schema --> DS
+        DS --> Encode
+        Encode --> Batch
+    end
+    
+    subgraph "Model Training"
+        Train[Training Loop<br/>train.py]
+        Model[WebAgentPolicy<br/>BERT-based]
+        Checkpoint[Model Checkpoint<br/>.pt file]
+        
+        Batch --> Train
+        Train --> Model
+        Model --> Checkpoint
+    end
+    
+    subgraph "Runtime Inference"
+        Agent[SLMAgent<br/>Load checkpoint]
+        Inference[Forward Pass<br/>State → Action]
+        Browser[Browser Action<br/>Execute]
+        
+        Checkpoint --> Agent
+        Agent --> Inference
+        Inference --> Browser
+    end
+    
+    subgraph "Feedback Loop"
+        Rec[TrajectoryRecorder<br/>Record new data]
+        Update[Update Dataset<br/>Continuous learning]
+        
+        Browser -.-> Rec
+        Rec -.-> Schema
+        Schema -.-> Update
+        Update -.-> DS
+    end
+    
+    style Schema fill:#ff9999
+    style Model fill:#99ccff
+    style Agent fill:#99ff99
+    style Rec fill:#ffeb99

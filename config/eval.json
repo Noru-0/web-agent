@@ -1,0 +1,22 @@
+{
+  "environments": [
+    {
+      "name": "example-form",
+      "type": "form",
+      "url": "https://example.com/form",
+      "form_data": {
+        "name": "Test User",
+        "email": "test@example.com"
+      },
+      "submit_selector": "button[type='submit']"
+    },
+    {
+      "name": "example-navigation",
+      "type": "navigation",
+      "url": "https://example.com",
+      "goal": "contact information"
+    }
+  ],
+  "num_episodes": 10,
+  "timeout": 60000
+}

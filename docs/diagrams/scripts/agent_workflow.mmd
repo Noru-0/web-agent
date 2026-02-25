@@ -1,0 +1,35 @@
+flowchart TD
+    Start([Start: Receive Task]) --> Init[Initialize Agent<br/>Load model checkpoint]
+    Init --> CreateEnv[Create Environment<br/>Launch browser]
+    CreateEnv --> GetState[Get Initial State<br/>URL, DOM, accessibility tree]
+    
+    GetState --> Observe[Encode Observation<br/>StateEncoder]
+    Observe --> Predict[Model Prediction<br/>action_type, target, value]
+    
+    Predict --> ValidAction{Valid Action?}
+    ValidAction -->|No| Fallback[Use fallback<br/>SimpleAgent]
+    ValidAction -->|Yes| Execute[Execute Action<br/>click, type, scroll, etc.]
+    
+    Fallback --> Execute
+    Execute --> UpdateState[Update Environment State]
+    
+    UpdateState --> CheckDone{Task Complete?}
+    CheckDone -->|No| Record[Record Transition<br/>TrajectoryRecorder]
+    CheckDone -->|Yes| Success[Task Success]
+    
+    Record --> MaxSteps{Max Steps?}
+    MaxSteps -->|No| GetState
+    MaxSteps -->|Yes| Timeout[Task Timeout]
+    
+    Success --> SaveTrajectory[Save Full Trajectory<br/>JSON format]
+    Timeout --> SaveTrajectory
+    
+    SaveTrajectory --> Cleanup[Cleanup Resources<br/>Close browser]
+    Cleanup --> End([End])
+    
+    style Start fill:#99ff99
+    style End fill:#ff9999
+    style Predict fill:#ffcc99
+    style Execute fill:#99ccff
+    style Success fill:#99ff99
+    style Timeout fill:#ff9999

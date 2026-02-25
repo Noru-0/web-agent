@@ -1,0 +1,43 @@
+graph TB
+    subgraph "Offline Phase: Data Collection & Training"
+        Explorer[External Explorers<br/>WebTactix, AgentTrek]
+        Adapter[Adapter Layer<br/>Convert to unified format]
+        Schema[schema.py<br/>Unified Trajectory Format]
+        Training[Training Pipeline<br/>train.py, model.py]
+        Model[Trained SLM Model<br/>checkpoint.pt]
+        
+        Explorer -->|Raw logs| Adapter
+        Adapter -->|Trajectories| Schema
+        Schema -->|Training data| Training
+        Training -->|Produces| Model
+    end
+    
+    subgraph "Online Phase: Runtime Execution"
+        Browser[Browser Layer<br/>BrowserSession, Playwright]
+        Env[Environment<br/>DemoWebEnv]
+        Agent[Agent System<br/>SLMAgent, SimpleAgent]
+        Runner[Agent Runner<br/>Episode Controller]
+        Recorder[Trajectory Recorder<br/>Record to schema.py]
+        
+        Runner -->|Controls| Agent
+        Agent -->|Observes| Env
+        Env -->|State| Agent
+        Agent -->|Actions| Browser
+        Browser -->|DOM, Events| Env
+        Agent -.->|Records| Recorder
+        Recorder -.->|Feedback| Schema
+    end
+    
+    Model -.->|Inference| Agent
+    
+    style Explorer fill:#e1f5ff
+    style Adapter fill:#fff4e1
+    style Schema fill:#ffe1e1
+    style Training fill:#e1ffe1
+    style Model fill:#f0f0f0
+    
+    style Browser fill:#ffe1f5
+    style Env fill:#f5e1ff
+    style Agent fill:#ff9999
+    style Runner fill:#99ccff
+    style Recorder fill:#ffeb99

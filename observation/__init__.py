@@ -1,0 +1,3 @@
+"""
+Observation processing and encoding.
+"""

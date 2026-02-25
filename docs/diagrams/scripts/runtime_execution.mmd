@@ -1,0 +1,48 @@
+sequenceDiagram
+    participant User
+    participant Runner as AgentRunner
+    participant Agent as SLMAgent
+    participant Model as WebAgentPolicy
+    participant Env as DemoWebEnv
+    participant Browser as BrowserSession
+    
+    User->>Runner: run(task, url)
+    Runner->>Agent: initialize()
+    Agent->>Model: load_checkpoint()
+    Model-->>Agent: model ready
+    
+    Runner->>Env: reset(url)
+    Env->>Browser: navigate(url)
+    Browser-->>Env: page loaded
+    Env-->>Runner: initial state
+    
+    loop Episode Loop (max_steps)
+        Runner->>Env: get_state()
+        Env->>Browser: get_accessibility_tree()
+        Browser-->>Env: DOM elements
+        Env-->>Runner: state dict
+        
+        Runner->>Agent: act(state)
+        Agent->>Agent: encode_state()
+        Agent->>Model: forward(encoded_state)
+        Model-->>Agent: action logits
+        Agent->>Agent: decode_action()
+        Agent-->>Runner: action
+        
+        Runner->>Env: step(action)
+        Env->>Browser: execute(action)
+        Browser-->>Env: result
+        Env-->>Runner: next_state, done
+        
+        alt Task Complete
+            Runner->>Runner: break loop
+        else Continue
+            Runner->>Runner: next step
+        end
+    end
+    
+    Runner->>Env: close()
+    Env->>Browser: close_browser()
+    Runner-->>User: episode_result
+    
+    Note over Runner,Browser: All transitions recorded<br/>by TrajectoryRecorder

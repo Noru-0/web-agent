@@ -1,0 +1,52 @@
+================================================================================
+TASK SYNTHESIS SUMMARY
+================================================================================
+
+Total tasks: 7
+Total screens: 6
+Total actions: 24
+
+
+INITIAL TASKS (2):
+--------------------------------------------------------------------------------
+
+  Task: search products
+  Description: Search and filter products
+  Actions: 2
+  Screens: 2
+
+  Task: view product details
+  Description: Browse product details
+  Actions: 4
+  Screens: 6
+
+INTERMEDIATE TASKS (2):
+--------------------------------------------------------------------------------
+
+  Task: select actions
+  Description: Perform select-related actions
+  Actions: 3
+  Screens: 3
+
+  Task: sort actions
+  Description: Perform sort-related actions
+  Actions: 1
+  Screens: 1
+
+TERMINAL TASKS (3):
+--------------------------------------------------------------------------------
+
+  Task: add to cart
+  Description: Add items to shopping cart
+  Actions: 4
+  Screens: 5
+
+  Task: subscribe actions
+  Description: Perform subscribe-related actions
+  Actions: 1
+  Screens: 3
+
+  Task: submit actions
+  Description: Perform submit-related actions
+  Actions: 1
+  Screens: 1

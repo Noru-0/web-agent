@@ -1,0 +1,41 @@
+flowchart LR
+    subgraph "Data Collection"
+        Raw[Raw Explorer Logs<br/>Different formats]
+        Adapt[Adapter<br/>webtactix_adapter.py<br/>agenttrek_adapter.py]
+        Unified[Unified Trajectories<br/>schema.py format]
+        
+        Raw --> Adapt
+        Adapt --> Unified
+    end
+    
+    subgraph "Data Preparation"
+        Unified --> Split[Train/Val Split<br/>80/20]
+        Split --> Dataset[TrajectoryDataset<br/>dataset.py]
+        Dataset --> Collate[State Encoding<br/>collate.py]
+    end
+    
+    subgraph "Model Training"
+        Collate --> Model[WebAgentPolicy<br/>BERT encoder<br/>+ action heads]
+        Model --> Loss[Loss Computation<br/>CrossEntropy<br/>for each action part]
+        Loss --> Optim[Optimizer Step<br/>AdamW]
+        Optim --> Val{Validation}
+        Val -->|Improve| Save[Save Checkpoint]
+        Val -->|No improve| Cont{Continue?}
+        Cont -->|Yes| Model
+        Cont -->|No| Best[Best Model]
+    end
+    
+    subgraph "Model Evaluation"
+        Best --> Eval[Evaluate<br/>evaluate.py]
+        Eval --> Metrics[Metrics<br/>Accuracy per action<br/>Success rate]
+        Metrics --> Deploy{Deploy?}
+        Deploy -->|Yes| Prod[Production SLMAgent]
+        Deploy -->|No| Retrain[Retrain/Tune]
+        Retrain --> Model
+    end
+    
+    style Raw fill:#e1f5ff
+    style Unified fill:#ffe1e1
+    style Model fill:#99ccff
+    style Best fill:#99ff99
+    style Prod fill:#ff9999

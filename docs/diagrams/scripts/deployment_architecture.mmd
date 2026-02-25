@@ -1,0 +1,58 @@
+graph TB
+    subgraph "Development Environment"
+        DevData[Training Data<br/>data/trajectories/]
+        DevScript[Training Scripts<br/>train.py, evaluate.py]
+        DevModel[Model Checkpoints<br/>checkpoints/]
+        
+        DevData --> DevScript
+        DevScript --> DevModel
+    end
+    
+    subgraph "Production Environment"
+        ProdAgent[SLMAgent Runtime<br/>examples/run_slm_agent.py]
+        ProdModel[Production Model<br/>best_model.pt]
+        ProdBrowser[Browser Instances<br/>Playwright + Chromium]
+        ProdEnv[Task Environments<br/>Different websites]
+        
+        DevModel -.->|Deploy| ProdModel
+        ProdAgent --> ProdModel
+        ProdAgent --> ProdBrowser
+        ProdBrowser --> ProdEnv
+    end
+    
+    subgraph "Monitoring & Feedback"
+        Monitor[Performance Monitor<br/>Success rate tracking]
+        Logger[Trajectory Logger<br/>Record executions]
+        Feedback[Feedback Loop<br/>Collect new data]
+        
+        ProdAgent --> Monitor
+        ProdAgent --> Logger
+        Logger --> Feedback
+        Feedback -.->|New data| DevData
+    end
+    
+    subgraph "Infrastructure"
+        GPU[GPU Server<br/>Training]
+        CPU[CPU Server<br/>Inference]
+        Storage[Storage<br/>Models + Data]
+        
+        DevScript --> GPU
+        ProdAgent --> CPU
+        DevModel --> Storage
+        DevData --> Storage
+    end
+    
+    subgraph "API Layer (Optional)"
+        API[REST API<br/>Task submission]
+        Queue[Task Queue<br/>Redis/RabbitMQ]
+        Workers[Worker Pool<br/>Multiple agents]
+        
+        API --> Queue
+        Queue --> Workers
+        Workers --> ProdAgent
+    end
+    
+    style DevModel fill:#99ccff
+    style ProdAgent fill:#ff9999
+    style Monitor fill:#99ff99
+    style API fill:#ffeb99

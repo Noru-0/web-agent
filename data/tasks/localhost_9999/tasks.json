@@ -1,0 +1,151 @@
+{
+  "tasks": [
+    {
+      "task_id": "task_19ea8e26337c",
+      "name": "search products",
+      "description": "Search and filter products",
+      "related_actions": [
+        "76daf69b3a1d",
+        "ce126b7b3763"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "df5b86fd1f8b312c",
+        "3b9f781b4ac60595"
+      ],
+      "priority": "initial",
+      "meta": {
+        "action_count": 2,
+        "screen_count": 2
+      }
+    },
+    {
+      "task_id": "task_740f54b1adb1",
+      "name": "view product details",
+      "description": "Browse product details",
+      "related_actions": [
+        "d3f04fd19ae1",
+        "4ebf57e1e2d6",
+        "db9acf62aa22",
+        "0c234779829c"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "cee0604f3aa0c086",
+        "df5b86fd1f8b312c",
+        "3b9f781b4ac60595",
+        "5b8f86f9b2e6d9df",
+        "565b584c47be7a17",
+        "0046bf743746ad53"
+      ],
+      "priority": "initial",
+      "meta": {
+        "action_count": 4,
+        "screen_count": 6
+      }
+    },
+    {
+      "task_id": "task_cda10f0fdcf7",
+      "name": "select actions",
+      "description": "Perform select-related actions",
+      "related_actions": [
+        "06093bd411ce",
+        "0a7da7e7c1ee",
+        "f8636989df0f"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "565b584c47be7a17",
+        "0046bf743746ad53",
+        "5b8f86f9b2e6d9df"
+      ],
+      "priority": "intermediate",
+      "meta": {
+        "action_count": 3,
+        "screen_count": 3
+      }
+    },
+    {
+      "task_id": "task_b60fa56c441a",
+      "name": "sort actions",
+      "description": "Perform sort-related actions",
+      "related_actions": [
+        "48f5313d1370"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "df5b86fd1f8b312c"
+      ],
+      "priority": "intermediate",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 1
+      }
+    },
+    {
+      "task_id": "task_7315076f8604",
+      "name": "add to cart",
+      "description": "Add items to shopping cart",
+      "related_actions": [
+        "320b69b7f0f7",
+        "f8929994cd78",
+        "b1746477f9d4",
+        "3b1feaa63444"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "cee0604f3aa0c086",
+        "df5b86fd1f8b312c",
+        "5b8f86f9b2e6d9df",
+        "565b584c47be7a17",
+        "0046bf743746ad53"
+      ],
+      "priority": "terminal",
+      "meta": {
+        "action_count": 4,
+        "screen_count": 5
+      }
+    },
+    {
+      "task_id": "task_90cca8b33f51",
+      "name": "subscribe actions",
+      "description": "Perform subscribe-related actions",
+      "related_actions": [
+        "639fb7bf00ca"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "cee0604f3aa0c086",
+        "0046bf743746ad53",
+        "3b9f781b4ac60595"
+      ],
+      "priority": "terminal",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 3
+      }
+    },
+    {
+      "task_id": "task_5995bb746fe9",
+      "name": "submit actions",
+      "description": "Perform submit-related actions",
+      "related_actions": [
+        "d2360ebbf255"
+      ],
+      "confidence": 1.0,
+      "entry_screens": [
+        "565b584c47be7a17"
+      ],
+      "priority": "terminal",
+      "meta": {
+        "action_count": 1,
+        "screen_count": 1
+      }
+    }
+  ],
+  "meta": {
+    "total_screens": 6,
+    "total_actions": 24,
+    "unique_actions": 16
+  }
+}

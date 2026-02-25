@@ -1,0 +1,27 @@
+# Agent configuration
+
+agent:
+  name: "web-agent-slm"
+  max_steps: 50
+  timeout: 30000  # milliseconds
+
+model:
+  name: "gpt2"  # or "distilgpt2", "microsoft/phi-2", etc.
+  device: "cpu"  # or "cuda"
+  max_length: 512
+
+encoder:
+  max_html_length: 10000
+  include_screenshot: false
+  include_dom_tree: false
+
+policy:
+  type: "greedy"  # or "exploration"
+  temperature: 1.0
+  epsilon: 0.0
+
+browser:
+  headless: false
+  viewport_width: 1280
+  viewport_height: 720
+  timeout: 30000
