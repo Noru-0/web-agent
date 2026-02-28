@@ -57,7 +57,32 @@ By participating in this project, you agree to maintain a respectful and inclusi
    python scripts/verify_system.py
    ```
 
+7. (Optional) Install git hooks for PROJECT_CONTEXT.md reminders:
+   ```bash
+   bash scripts/install_git_hooks.sh
+   ```
+   This will remind you to update PROJECT_CONTEXT.md before each commit.
+
 ## Development Workflow
+
+### ⚠️ IMPORTANT: Project Context Rule
+
+**MANDATORY**: After making any significant changes, you MUST update `PROJECT_CONTEXT.md` at the root of the project.
+
+This file tracks:
+- Recent changes and their dates
+- Current project status
+- Known issues
+- Active development areas
+
+**What counts as "significant":**
+- Adding/modifying features
+- Fixing bugs
+- Changing architecture
+- Adding/removing dependencies
+- Updating configuration
+
+See [.agents/RULES.md](.agents/RULES.md) for detailed guidelines.
 
 ### Branch Naming
 
@@ -69,34 +94,40 @@ Use descriptive branch names:
 
 ### Making Changes
 
-1. Create a new branch from `main`:
+1. **Read `PROJECT_CONTEXT.md`** to understand current project state
+
+2. Create a new branch from `main`:
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-2. Make your changes following the [coding standards](#coding-standards)
+3. Make your changes following the [coding standards](#coding-standards)
 
-3. Test your changes:
+4. Test your changes:
    ```bash
    pytest tests/
    python scripts/verify_system.py
    ```
 
-4. Commit your changes with clear messages:
+5. **Update `PROJECT_CONTEXT.md`** with your changes (MANDATORY)
+
+6. Commit your changes with clear messages:
    ```bash
    git commit -m "feat: add task synthesis for news domain"
    ```
 
 ## Pull Request Process
 
-1. Update documentation if needed
-2. Add tests for new features
-3. Ensure all tests pass
-4. Update CHANGELOG.md if applicable
-5. Submit a pull request with:
+1. **Verify `PROJECT_CONTEXT.md` has been updated** (MANDATORY)
+2. Update documentation if needed
+3. Add tests for new features
+4. Ensure all tests pass
+5. Update CHANGELOG.md if applicable
+6. Submit a pull request with:
    - Clear description of changes
    - Reference to related issues
    - Screenshots/examples if applicable
+   - Confirmation that PROJECT_CONTEXT.md is updated
 
 ### PR Title Format
 
@@ -142,13 +173,13 @@ MAX_RETRIES = 3
 # Classes and functions
 class MyClass:
     """Class docstring."""
-    
+
     def my_method(self, param: str) -> bool:
         """Method docstring.
-        
+
         Args:
             param: Parameter description
-            
+
         Returns:
             Return value description
         """
@@ -226,12 +257,32 @@ Example:
 def test_url_to_folder_name_with_port():
     """Test URL conversion with port number."""
     from exploration.storage import url_to_folder_name
-    
+
     result = url_to_folder_name("http://localhost:9999")
     assert result == "localhost_9999"
 ```
 
 ## Documentation
+
+### Project Context (CRITICAL)
+
+The `PROJECT_CONTEXT.md` file at the root is the living document of this project's state.
+
+**Update it whenever you:**
+- Complete a feature or task
+- Fix a bug
+- Change architecture or structure
+- Add/remove dependencies or tools
+- Discover issues or blockers
+
+**Quick update template:**
+```markdown
+### [Current Date]
+- **Added**: [What was added]
+- **Fixed**: [What was fixed]
+- **Modified**: [What was changed]
+- **Files**: [List of affected files]
+```
 
 ### Updating Documentation
 
@@ -251,6 +302,10 @@ docs/
 ├── PHASE3_WORKFLOW.md     # Task synthesis
 └── REFERENCE.md           # API reference
 ```
+
+**Additional Files:**
+- `PROJECT_CONTEXT.md` - Project status and recent changes (root)
+- `.agents/RULES.md` - Agent-specific rules and guidelines
 
 ## Areas for Contribution
 

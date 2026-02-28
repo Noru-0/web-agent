@@ -2,11 +2,13 @@
 
 A production web agent system powered by a Small Language Model (SLM), with LLM-based exploration for offline training data generation.
 
+> **📍 Project Status**: See [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) for current development status, recent changes, and known issues.
+
 ## 🔥 Recent Updates (Feb 2026)
 
 **URL-Based Storage & Automatic Task Synthesis:**
 - ✅ **URL-based folders**: Each website gets unique folder (e.g., `localhost_9999`, `shop.example.com`)
-- ✅ **No auto-cleanup**: Previous explorations preserved by default  
+- ✅ **No auto-cleanup**: Previous explorations preserved by default
 - ✅ **Automatic task synthesis**: Phase 3 runs automatically after exploration
 - ✅ **Domain-aware patterns**: Task synthesis supports ecommerce, news, social, banking, streaming
 - ✅ **Consolidated docs**: Reduced from 18 to 6 core documentation files
@@ -260,7 +262,7 @@ python -u scripts/verify_system.py
 
 **What verification does NOT do:**
 - ❌ Launch browsers
-- ❌ Initialize models  
+- ❌ Initialize models
 - ❌ Load checkpoints
 - ❌ Run agents
 
@@ -333,12 +335,12 @@ The agent system implements the **production runtime** that runs in inference mo
 - **BaseAgent**: Abstract interface (`agents/base_agent.py`)
   - `reset()`: Initialize for new episode
   - `act(observation) -> Action`: Select action given observation
-  
+
 - **SimpleAgent**: Rule-based baseline (`agents/simple_agent.py`)
   - Uses fixed heuristics (e.g., click first element)
   - No learning, no model required
   - Serves as baseline for comparison
-  
+
 - **AgentRunner**: Episode controller (`agents/runner.py`)
   - Connects agent with environment
   - Runs episode loop: observe → act → step
@@ -479,7 +481,7 @@ agent = SLMAgent.from_checkpoint(checkpoint_path, temperature=0.5)
 **State Encoding** (matching training):
 - Character-level text encoding (vocab_size=1000)
 - URL: max 128 chars
-- Text: max 512 chars  
+- Text: max 512 chars
 - Elements: max 50 elements, 32 chars each
 
 **Action Decoding**:
@@ -502,7 +504,7 @@ The system can record production agent runs in the unified trajectory format:
 ### Purpose
 
 - **Debugging**: Understand what agents actually do
-- **Analysis**: Study behavior patterns  
+- **Analysis**: Study behavior patterns
 - **Training data**: Augment offline exploration data
 - **Validation**: Verify agent behaves correctly
 
@@ -777,11 +779,13 @@ python scripts/verify_system.py --checkpoint checkpoints/best_model.pt --verbose
 
 ### Core Documentation
 
+- **[PROJECT_CONTEXT.md](PROJECT_CONTEXT.md)** - 📍 **Current project status, recent changes, and active development** (Check here first!)
 - **[docs/QUICKSTART.md](docs/QUICKSTART.md)** - Complete quickstart guide (installation, exploration, training)
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture and design principles
-- **[docs/WORKFLOW.md](docs/WORKFLOW.md)** - Complete development workflow  
+- **[docs/WORKFLOW.md](docs/WORKFLOW.md)** - Complete development workflow
 - **[docs/PHASE3_WORKFLOW.md](docs/PHASE3_WORKFLOW.md)** - Task synthesis detailed guide
 - **[docs/REFERENCE.md](docs/REFERENCE.md)** - API and command reference
+- **[.agents/RULES.md](.agents/RULES.md)** - Agent development rules and guidelines
 
 ### Component Documentation
 

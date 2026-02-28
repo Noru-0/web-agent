@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "browser-automation": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "8a192684119aea4a354c252af3941e3f0e95623d1ab9a4492a5f309fd365f1f8"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "6412eb4eb3b91595ebab937f0c69501240e7ba761b3d82510b5cf506ec5c7adc"
+    },
+    "playwright-visual-testing": {
+      "source": "manutej/luxor-claude-marketplace",
+      "sourceType": "github",
+      "computedHash": "c942ebb478c672f41d4dbf673d0a6b04584ba8bd7bdf2c5b1f42e0d2f59bc249"
+    },
+    "webapp-testing": {
+      "source": "eyadsibai/ltk",
+      "sourceType": "github",
+      "computedHash": "3769590c49bbe459fa12ac4a27ec0c9e3b2d20ade75a9d920576edba6f7f2176"
+    }
+  }
+}
