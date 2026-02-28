@@ -12,8 +12,9 @@ playwright>=1.40.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 
-# LLM APIs for exploration
+# LLM APIs for exploration and task synthesis
 openai>=1.0.0
+anthropic>=0.18.0  # For Claude (NEW - Phase 2 LLM synthesis)
 requests>=2.31.0  # For HuggingFace router API
 
 # Optional: for enhanced features

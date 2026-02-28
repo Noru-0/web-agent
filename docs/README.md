@@ -4,16 +4,50 @@ Comprehensive documentation for the Web Agent exploration and training system.
 
 ---
 
+## ⚠️ IMPORTANT: Architecture Update in Progress
+
+**Based on Professor Vũ's feedback (March 1, 2026)**, the project is undergoing significant architecture changes. Please refer to:
+- **[FEEDBACK_SUMMARY.md](FEEDBACK_SUMMARY.md)** - Quick summary of required changes
+- **[FEEDBACK_ANALYSIS.md](FEEDBACK_ANALYSIS.md)** - Detailed analysis and action plan
+- **[ACTION_CHECKLIST.md](ACTION_CHECKLIST.md)** - Implementation checklist
+
+Key changes:
+- Phase 2 (Task Synthesis) will be rewritten to use LLM instead of algorithms
+- Phase 3 (Task Validation) needs to be implemented
+- Some existing docs may be temporarily outdated during transition
+
+---
+
 ## 📖 Documentation Index
+
+### 🚨 Current Status & Changes
+
+**[FEEDBACK_SUMMARY.md](FEEDBACK_SUMMARY.md)** - ⭐ **READ THIS FIRST**
+- Summary of Professor Vũ's feedback
+- Key misalignments identified
+- Action items and timeline
+- Quick reference for changes
+
+**[FEEDBACK_ANALYSIS.md](FEEDBACK_ANALYSIS.md)** - Detailed analysis
+- Full feedback breakdown
+- Current vs desired architecture
+- Code examples and comparisons
+- Estimated effort and timeline
+
+**[ACTION_CHECKLIST.md](ACTION_CHECKLIST.md)** - Implementation plan
+- Week-by-week checklist
+- Task assignments
+- Progress tracking
+- Definition of done
 
 ### 🚀 Getting Started
 
 **[QUICKSTART.md](QUICKSTART.md)** - Complete quickstart guide
 - Installation and setup
-- Running exploration (Phase 2 & 3)
-- Data processing and cleaning
-- Model training
-- Agent execution
+- Running exploration (Phase 1) ✅ Current
+- ⚠️ Phase 2 & 3 sections may be outdated during transition
+- Model training (Phase 4)
+- Agent execution (Phase 5)
 - Storage system (URL-based folders)
 
 ### 🏗️ Architecture
@@ -165,7 +199,7 @@ python agents/runner.py
 - **Consolidated docs**: Reduced from 18 to 6 core documentation files
 
 ### "I need API reference"
-→ See [REFERENCE.md](REFERENCE.md)  
+→ See [REFERENCE.md](REFERENCE.md)
 → Check code patterns in [REFERENCE.md](REFERENCE.md#common-patterns)
 
 ---

@@ -62,6 +62,20 @@ from .task_synthesis import (
     TaskPriority
 )
 
+from .llm_task_synthesizer import (
+    LLMTaskSynthesizer,
+    SynthesizedTask,
+    TaskStep,
+    synthesize_tasks_with_llm
+)
+
+from .task_validator import (
+    TaskValidator,
+    ValidationResult,
+    ValidationReport,
+    validate_tasks_from_synthesis
+)
+
 __all__ = [
     # Data models
     "Screen",
@@ -69,12 +83,22 @@ __all__ = [
     "Transition",
     "ExplorationResult",
     "ScreenType",
-    # Task synthesis
+    # Task synthesis (deterministic - OLD)
     "Task",
     "TaskGraph",
     "TaskPriority",
     "TaskSynthesizer",
     "TaskSynthesisPromptBuilder",
+    # Task synthesis (LLM-based - NEW, aligned with professor's feedback)
+    "LLMTaskSynthesizer",
+    "SynthesizedTask",
+    "TaskStep",
+    "synthesize_tasks_with_llm",
+    # Task validation (Phase 3 - NEW)
+    "TaskValidator",
+    "ValidationResult",
+    "ValidationReport",
+    "validate_tasks_from_synthesis",
     # Exploration logic
     "run_exploration",
     "ExplorationLoop",
