@@ -1,0 +1,64 @@
+{
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "name": "Learning More About Example Domain",
+      "description": "The user wants to understand more about the purpose and use of Example Domain.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to https://www.example.com/.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Read the brief description on the use of Example Domain.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Click on the 'Learn more...' link to access more detailed information.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "content"
+    },
+    {
+      "task_id": "task_2",
+      "name": "Understanding Placeholder Domain Use",
+      "description": "The user seeks clarification on why and how to use a placeholder domain in documentation or examples.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Go to the homepage URL: https://www.example.com/.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Identify and read the section about placeholder domain use.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Click the 'Learn more...' link to get detailed guidelines and restrictions.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "content"
+    }
+  ],
+  "metadata": {
+    "total_tasks": 2,
+    "synthesizer": "LLMTaskSynthesizer",
+    "llm_provider": "openai",
+    "model": "gpt-4-turbo-preview"
+  }
+}

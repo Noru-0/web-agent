@@ -216,10 +216,10 @@ async def validate_tasks():
     # Load tasks from Phase 2
     synthesizer = LLMTaskSynthesizer()
     # ... load tasks ...
-    
+
     # Create environment
     env = GenericWebEnv(start_url="https://example.com")
-    
+
     # Validate tasks
     validator = TaskValidator(env)
     report = await validator.validate_tasks(
@@ -227,9 +227,9 @@ async def validate_tasks():
         save_validated=True,
         output_dir=Path("data/validated/example_com")
     )
-    
+
     print(f"Validation: {report.validated_tasks}/{report.total_tasks} passed")
-    
+
     await env.close()
 
 # Run validation
@@ -324,7 +324,7 @@ Be patient!
 # 1. Explore website (Phase 1)
 python run_exploration.py --url https://example.com --skip-task-synthesis
 
-# 2. Synthesize tasks with LLM (Phase 2)  
+# 2. Synthesize tasks with LLM (Phase 2)
 python scripts/run_task_synthesis.py \
     --input data/raw/example_com \
     --output data/tasks/example_com \
@@ -385,5 +385,5 @@ ANTHROPIC_API_KEY=your_key_here
 
 ---
 
-**Last Updated:** March 1, 2026  
+**Last Updated:** March 1, 2026
 **Status:** ✅ Phase 2 & 3 implemented and ready to use!

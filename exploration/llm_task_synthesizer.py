@@ -202,7 +202,14 @@ class LLMTaskSynthesizer:
                 from_url = from_screen.url if from_screen else "unknown"
                 to_url = to_screen.url if to_screen else "unknown"
 
-                action_desc = trans.action_semantic.description if hasattr(trans.action_semantic, 'description') else "action"
+                # Look up action from actions dict using action_id
+                action = exploration_result.actions.get(trans.action_id)
+                if action and hasattr(action, 'semantic') and action.semantic:
+                    action_desc = (action.semantic.description
+                                 if hasattr(action.semantic, 'description')
+                                 else str(action.semantic))
+                else:
+                    action_desc = f"action_{trans.action_id[:8]}"
 
                 output.append(f"{i}. {from_url} --[{action_desc}]--> {to_url}")
 
