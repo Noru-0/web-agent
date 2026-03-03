@@ -68,7 +68,53 @@ When working with data storage:
 
 ---
 
-## 🔍 Code Review Checklist
+## � File Organization Rules
+
+**MANDATORY**: All new files created during agent work MUST be placed in the correct directory:
+
+### File Organization Guidelines
+- **Documentation files** (`.md`) → `docs/`
+- **Test files** (`test_*.py`) → `tests/`
+- **Scripts/CLI tools** (`run_*.py`, `check_*.py`) → `scripts/`
+- **Configuration files** (`*.yaml`, `*.json` config) → `config/`
+- **Core modules** (business logic) → Appropriate folder based on type:
+  - Browser control → `browser/`
+  - Agents → `agents/`
+  - Adapters → `adapters/`
+  - Exploration logic → `exploration/`
+  - Training → `training/`
+  - Utilities → `utils/`
+  - Data/Tasks → `data/tasks/{url_folder}/`
+- **Examples** → `examples/`
+
+### Project Structure Overview
+```
+web-agent/
+├── README.md                 # Main entry point
+├── requirements.txt          # Dependencies
+├── schema.py                 # Core schema file
+├── adapters/                 # Adapter implementations
+├── agents/                   # Agent implementations
+├── browser/                  # Browser control logic
+├── config/                   # Configuration files
+├── data/                     # Data storage (tasks, recordings)
+├── docs/                     # Documentation (all .md files)
+├── exploration/              # Exploration logic
+├── scripts/                  # Executable scripts
+├── tests/                    # Test files
+├── training/                 # Training logic
+└── utils/                    # Utility modules
+```
+
+### When Creating New Files
+1. Determine the file type and purpose
+2. Place it in the corresponding directory per guidelines
+3. Update `PROJECT_CONTEXT.md` with the new file location
+4. If adding a new module directory, document it in `docs/ARCHITECTURE.md`
+
+---
+
+## �🔍 Code Review Checklist
 
 Before submitting changes, verify:
 
@@ -185,4 +231,4 @@ If uncertain about any rule or guideline:
 
 **Remember: Good agents follow rules, great agents improve them!** 🎯
 
-_Last Updated: March 1, 2026_
+_Last Updated: March 4, 2026_

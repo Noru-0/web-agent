@@ -2,7 +2,7 @@
 
 > **⚠️ IMPORTANT RULE**: This file MUST be updated whenever any significant changes are made to the project.
 
-Last Updated: March 1, 2026
+Last Updated: March 4, 2026
 
 ---
 
@@ -107,6 +107,40 @@ web-agent/
 ---
 
 ## 🔧 Recent Changes
+
+### March 4, 2026 - Project Organization & File Management Rules ✅
+- **Reorganized**: Root directory structure for better maintainability
+  - Moved all documentation (`.md` files) to `docs/`
+  - Moved executable scripts to `scripts/`
+  - Moved configuration files to `config/`
+  - Root now contains only: README.md, requirements.txt, schema.py, __init__.py
+- **Updated**: `.agents/RULES.md` with File Organization Rules
+  - Added mandatory "📁 File Organization Rules" section
+  - Documented directory structure guidelines
+  - Clarified file placement rules by type (docs, scripts, config, code modules)
+  - This ensures all future files created by agents go in correct locations
+- **Added**: `docs/OVERVIEW.md` - Quick project overview for newcomers
+  - Simple Vietnamese explanation of what the project does
+  - 5-phase workflow visualization
+  - Quick start commands
+  - Project structure overview
+  - FAQ section
+  - Makes it easy for new contributors to understand the project quickly
+- **Updated**: `docs/OVERVIEW.md` - Clarified 3-phase LLM workflow
+  - **Phase 1 clarification**: LLM explores freely, records ALL actions (including wrong ones)
+  - **Phase 2 clarification**: LLM synthesizer groups actions into meaningful tasks
+  - **Phase 3 emphasis**: LLM validator re-runs tasks to filter out invalid ones
+  - Added detailed example showing failed tasks being rejected
+  - Added "Ba Loại LLM" section explaining different LLM roles
+  - Added "Tại Sao Cần Phase 3?" section explaining quality control
+  - Makes it crystal clear that only validated, working tasks are used for SLM training
+- **Impact**: Cleaner project structure, easier navigation, enforces consistency
+- **Files Modified**:
+  - .agents/RULES.md (added new section)
+  - docs/PROJECT_CONTEXT.md (this file)
+  - docs/OVERVIEW.md (NEW + updated with workflow clarifications)
+  - README.md (added link to OVERVIEW.md)
+  - Files moved: 11 .md docs, run_exploration.py, skills-lock.json
 
 ### March 1, 2026 - Implementation of Professor's Feedback ✅
 - **Implemented**: LLM-based task synthesis (Phase 2 - NEW)

@@ -2,7 +2,8 @@
 
 A production web agent system powered by a Small Language Model (SLM), with LLM-based exploration for offline training data generation.
 
-> **📍 Project Status**: See [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) for current development status, recent changes, and known issues.
+> **🎯 New here?** Read [docs/OVERVIEW.md](docs/OVERVIEW.md) for a quick introduction (Vietnamese)
+> **📍 Project Status**: See [docs/PROJECT_CONTEXT.md](docs/PROJECT_CONTEXT.md) for current development status, recent changes, and known issues.
 
 ## 🔥 Recent Updates (Feb 2026)
 
@@ -779,7 +780,8 @@ python scripts/verify_system.py --checkpoint checkpoints/best_model.pt --verbose
 
 ### Core Documentation
 
-- **[PROJECT_CONTEXT.md](PROJECT_CONTEXT.md)** - 📍 **Current project status, recent changes, and active development** (Check here first!)
+- **[docs/OVERVIEW.md](docs/OVERVIEW.md)** - 🎯 **Quick introduction for newcomers** (Vietnamese, start here!)
+- **[docs/PROJECT_CONTEXT.md](docs/PROJECT_CONTEXT.md)** - 📍 **Current project status, recent changes, and active development**
 - **[docs/QUICKSTART.md](docs/QUICKSTART.md)** - Complete quickstart guide (installation, exploration, training)
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture and design principles
 - **[docs/WORKFLOW.md](docs/WORKFLOW.md)** - Complete development workflow
