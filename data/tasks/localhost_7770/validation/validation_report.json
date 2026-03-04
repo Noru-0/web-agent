@@ -1,0 +1,99 @@
+{
+  "total_tasks": 10,
+  "validated_tasks": 7,
+  "failed_tasks": 3,
+  "success_rate": 0.7,
+  "validation_results": [
+    {
+      "task_id": "task_1",
+      "task_name": "Add Items to Cart",
+      "success": false,
+      "failure_reason": "Failed at step 3: could not execute action",
+      "execution_time": 0.573168,
+      "steps_completed": 2,
+      "total_steps": 3
+    },
+    {
+      "task_id": "task_2",
+      "task_name": "View Item Details",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.127497,
+      "steps_completed": 3,
+      "total_steps": 3
+    },
+    {
+      "task_id": "task_3",
+      "task_name": "Explore Product Categories",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.110974,
+      "steps_completed": 3,
+      "total_steps": 3
+    },
+    {
+      "task_id": "task_4",
+      "task_name": "Create an Account",
+      "success": false,
+      "failure_reason": "Failed at step 1: could not execute action",
+      "execution_time": 0.115025,
+      "steps_completed": 0,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_5",
+      "task_name": "Search for Products",
+      "success": false,
+      "failure_reason": "Failed at step 1: could not execute action",
+      "execution_time": 0.144929,
+      "steps_completed": 0,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_6",
+      "task_name": "Manage Wish List",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.117966,
+      "steps_completed": 4,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_7",
+      "task_name": "Filter Products by Rating",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.120106,
+      "steps_completed": 4,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_8",
+      "task_name": "Compare Products",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.133224,
+      "steps_completed": 4,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_9",
+      "task_name": "View Shopping Cart",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.111093,
+      "steps_completed": 4,
+      "total_steps": 4
+    },
+    {
+      "task_id": "task_10",
+      "task_name": "Apply Coupon Code",
+      "success": true,
+      "failure_reason": null,
+      "execution_time": 0.11786,
+      "steps_completed": 4,
+      "total_steps": 4
+    }
+  ],
+  "timestamp": "2026-03-04T08:30:04.734519"
+}

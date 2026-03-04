@@ -1,0 +1,190 @@
+{
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "name": "Add Items to Cart",
+      "description": "The user wants to select items they are interested in purchasing and add them to their shopping cart for later checkout.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Browse or search for items of interest, such as 'Pre-baked Gingerbread House Kit Value Pack' or 'V8 +Energy, Healthy Energy Drink'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Click on the 'Add to Cart' button for each item they wish to purchase.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "purchase"
+    },
+    {
+      "task_id": "task_2",
+      "name": "View Item Details",
+      "description": "The user wants to learn more about a product before deciding to add it to their cart.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Locate a product of interest, like 'Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Click on the product card or 'View Details' link to see more information about the product.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_3",
+      "name": "Explore Product Categories",
+      "description": "The user wants to explore products within specific categories to find items they are interested in.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Review the list of categories such as 'Beauty & Personal Care', 'Sports & Outdoors', and 'Electronics'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Select a category to view all available products within that category.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_4",
+      "name": "Create an Account",
+      "description": "The user wants to create an account to manage their orders, wish list, and personal information more conveniently.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Click on 'Create an Account' in the top navigation bar.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Fill out the registration form with personal details and preferences.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Submit the form to create a new account.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "account"
+    },
+    {
+      "task_id": "task_5",
+      "name": "Search for Products",
+      "description": "The user wants to find specific products by using the search functionality.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Locate the 'Search' box, usually at the top of the page.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Type in a keyword or product name, such as 'Gingerbread House Kit' or 'Energy Drink'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Press Enter or click the search icon to view search results.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "search"
+    },
+    {
+      "task_id": "task_6",
+      "name": "Manage Wish List",
+      "description": "The user wants to add items to their wish list for future reference or purchase.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage and sign in to the account.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Browse or search for items of interest.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "On the product details page or from the product listing, select the option to 'Add to Wish List'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Access 'My Wish List' from the account dashboard to view or manage the list.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "account"
+    }
+  ],
+  "metadata": {
+    "total_tasks": 6,
+    "synthesizer": "LLMTaskSynthesizer",
+    "llm_provider": "openai",
+    "model": "gpt-4-turbo-preview"
+  }
+}

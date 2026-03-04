@@ -1,0 +1,228 @@
+{
+  "validated_tasks": [
+    {
+      "task_id": "task_2",
+      "name": "View Item Details",
+      "description": "The user wants to learn more about a product before deciding to add it to their cart.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Locate a product of interest, like 'Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Click on the product card or 'View Details' link to see more information about the product.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_3",
+      "name": "Explore Product Categories",
+      "description": "The user wants to explore products within specific categories to find items they are interested in.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Review the list of categories such as 'Beauty & Personal Care', 'Sports & Outdoors', and 'Electronics'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Select a category to view all available products within that category.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_6",
+      "name": "Manage Wish List",
+      "description": "The user wants to add items to their wish list for future reference or purchase.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage and sign in to the account.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Browse or search for items of interest.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "On the product details page or from the product listing, select the option to 'Add to Wish List'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Access 'My Wish List' from the account dashboard to view or manage the list.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 0.9,
+      "category": "account"
+    },
+    {
+      "task_id": "task_7",
+      "name": "Filter Products by Rating",
+      "description": "The user wants to filter and view products sorted by their rating to find the best-reviewed items.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Look for filter or sort options on the product listing page.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Select 'Sort by Rating' or apply a rating filter to show products with high customer ratings.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Review the filtered results to find the highest-rated products.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 0.85,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_8",
+      "name": "Compare Products",
+      "description": "The user wants to compare multiple products side-by-side to make an informed purchasing decision.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website's homepage and find products of interest.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Click 'Add to Compare' button on multiple products.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Access the comparison page to view side-by-side details of the selected products.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Review the specifications and pricing to help decide which product to purchase.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 0.8,
+      "category": "browse"
+    },
+    {
+      "task_id": "task_9",
+      "name": "View Shopping Cart",
+      "description": "The user wants to check the contents of their shopping cart before proceeding to checkout.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website and add items to the cart as needed.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Click on 'My Cart' link in the header navigation.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Review the list of items, quantities, and total price in the shopping cart.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Make any adjustments to item quantities or remove items if needed.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 0.9,
+      "category": "checkout"
+    },
+    {
+      "task_id": "task_10",
+      "name": "Apply Coupon Code",
+      "description": "The user wants to apply a discount coupon code to their order to reduce the total purchase price.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website and add desired items to the shopping cart.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Go to the shopping cart page by clicking 'My Cart'.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Look for a 'Coupon Code' or 'Promo Code' field on the cart or checkout page.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Enter the coupon code and click 'Apply' to see the discounted total.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 0.75,
+      "category": "checkout"
+    }
+  ],
+  "metadata": {
+    "count": 7,
+    "phase": "Phase 3 - Task Validation",
+    "timestamp": "2026-03-04T08:30:04.734876"
+  }
+}
