@@ -1,0 +1,10 @@
+{
+  "explorer_name": "simple",
+  "start_url": "http://localhost:7770",
+  "timestamp": "2026-03-04T08:28:47.891466",
+  "unique_screens": 1,
+  "actions": 3,
+  "transitions": 3,
+  "separation_valid": true,
+  "meta": {}
+}
