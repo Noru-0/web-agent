@@ -1,10 +1,10 @@
 {
-  "explorer_name": "simple",
+  "explorer_name": "agenttrek",
   "start_url": "http://localhost:7770",
-  "timestamp": "2026-03-04T08:28:47.891466",
-  "unique_screens": 1,
-  "actions": 3,
-  "transitions": 3,
+  "timestamp": "2026-03-11T11:45:41.426431",
+  "unique_screens": 7,
+  "actions": 11,
+  "transitions": 6,
   "separation_valid": true,
   "meta": {}
 }

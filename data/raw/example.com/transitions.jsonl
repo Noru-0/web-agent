@@ -1,2 +1,0 @@
-{"transition_id": "6b5d5a5e582ce26d", "from_screen_id": "e4621a2b4986a38d", "action_id": "7364898affa0", "to_screen_id": "e4621a2b4986a38d", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "6b5d5a5e582ce26d", "from_screen_id": "e4621a2b4986a38d", "action_id": "7364898affa0", "to_screen_id": "e4621a2b4986a38d", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}

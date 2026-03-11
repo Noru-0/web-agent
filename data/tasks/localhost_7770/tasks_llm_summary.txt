@@ -6,59 +6,68 @@ Total Tasks: 6
 LLM Provider: openai
 Model: gpt-4-turbo-preview
 
-Categories: purchase, browse, account, search
+Categories: purchase, account, search, browse, content
 
 ================================================================================
 
-1. Add Items to Cart
+1. Adding Products to Cart
    Category: purchase
-   Description: The user wants to select items they are interested in purchasing and add them to their shopping cart for later checkout.
-   Steps (3):
-      1. Navigate to the website's homepage.
-      2. Browse or search for items of interest, such as 'Pre-baked Gingerbread House Kit Value Pack' or 'V8 +Energy, Healthy Energy Drink'.
-      3. Click on the 'Add to Cart' button for each item they wish to purchase.
+   Description: User wants to add various products to their shopping cart for purchase.
+   Steps (6):
+      1. Navigate to the website homepage.
+      2. Browse or search for a specific product.
+      3. Click on the product to view its details.
+      4. Choose any necessary options (size, color, quantity).
+      5. Click the 'Add to Cart' button for the desired product.
+      6. Repeat steps 2-5 for additional products.
 
-2. View Item Details
-   Category: browse
-   Description: The user wants to learn more about a product before deciding to add it to their cart.
-   Steps (3):
-      1. Navigate to the website's homepage.
-      2. Locate a product of interest, like 'Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion'.
-      3. Click on the product card or 'View Details' link to see more information about the product.
-
-3. Explore Product Categories
-   Category: browse
-   Description: The user wants to explore products within specific categories to find items they are interested in.
-   Steps (3):
-      1. Navigate to the website's homepage.
-      2. Review the list of categories such as 'Beauty & Personal Care', 'Sports & Outdoors', and 'Electronics'.
-      3. Select a category to view all available products within that category.
-
-4. Create an Account
+2. Creating an Account
    Category: account
-   Description: The user wants to create an account to manage their orders, wish list, and personal information more conveniently.
-   Steps (4):
-      1. Navigate to the website's homepage.
-      2. Click on 'Create an Account' in the top navigation bar.
-      3. Fill out the registration form with personal details and preferences.
-      4. Submit the form to create a new account.
+   Description: User wants to create a new account to track orders and save wish lists.
+   Steps (5):
+      1. Navigate to the website homepage.
+      2. Click on 'Create an Account' link.
+      3. Fill out the registration form with personal information.
+      4. Submit the form.
+      5. Confirm the account creation through an email verification link.
 
-5. Search for Products
+3. Searching for Products
    Category: search
-   Description: The user wants to find specific products by using the search functionality.
-   Steps (4):
-      1. Navigate to the website's homepage.
-      2. Locate the 'Search' box, usually at the top of the page.
-      3. Type in a keyword or product name, such as 'Gingerbread House Kit' or 'Energy Drink'.
-      4. Press Enter or click the search icon to view search results.
+   Description: User wants to find products by keyword search.
+   Steps (5):
+      1. Navigate to the website homepage.
+      2. Locate the search bar.
+      3. Type a keyword or product name into the search bar.
+      4. Press Enter or click the search button.
+      5. Browse the search results.
 
-6. Manage Wish List
-   Category: account
-   Description: The user wants to add items to their wish list for future reference or purchase.
+4. Viewing Product Details
+   Category: browse
+   Description: User wants to view detailed information about a product, including price, ratings, and availability.
+   Steps (3):
+      1. Navigate to the website homepage or search for a specific product.
+      2. Click on the product from the search results or homepage showcase.
+      3. Review the product details on the product page.
+
+5. Checking Out
+   Category: purchase
+   Description: User wants to complete their purchase by checking out the items in their shopping cart.
+   Steps (7):
+      1. Ensure you are signed into your account.
+      2. Navigate to 'My Cart' by clicking on the cart icon.
+      3. Review the items in your cart and make any necessary adjustments (quantity, remove items).
+      4. Click the 'Checkout' button.
+      5. Enter shipping and payment information.
+      6. Review the order summary.
+      7. Confirm the order.
+
+6. Adding Products to Wish List
+   Category: content
+   Description: User wants to save products to a wish list for future purchase consideration.
    Steps (4):
-      1. Navigate to the website's homepage and sign in to the account.
-      2. Browse or search for items of interest.
-      3. On the product details page or from the product listing, select the option to 'Add to Wish List'.
-      4. Access 'My Wish List' from the account dashboard to view or manage the list.
+      1. Navigate to the website and sign into your account.
+      2. Search or browse for a product.
+      3. On the product page, click the 'Add to Wish List' button.
+      4. Repeat steps 2-3 for additional products.
 
 ================================================================================

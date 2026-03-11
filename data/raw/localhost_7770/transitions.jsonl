@@ -1,6 +1,12 @@
-{"transition_id": "8e748df71e0d75a4", "from_screen_id": "007fdc472feed721", "action_id": "b0633a4ffc0b", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "fe19c0db5ecbafda", "from_screen_id": "007fdc472feed721", "action_id": "b635f7517d0c", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "5b7876ade6abeea3", "from_screen_id": "007fdc472feed721", "action_id": "c01f66dfa063", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "8e748df71e0d75a4", "from_screen_id": "007fdc472feed721", "action_id": "b0633a4ffc0b", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "fe19c0db5ecbafda", "from_screen_id": "007fdc472feed721", "action_id": "b635f7517d0c", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
-{"transition_id": "5b7876ade6abeea3", "from_screen_id": "007fdc472feed721", "action_id": "c01f66dfa063", "to_screen_id": "007fdc472feed721", "success": false, "meta": {"error": "'ActionSemantic' object has no attribute 'hints'"}}
+{"transition_id": "ebdff11cf0a95ad5", "from_screen_id": "9e5e57c197243bd7", "action_id": "6cc90a158414", "to_screen_id": "c4385aa4a9dc65c3", "success": true, "meta": {}}
+{"transition_id": "a7418669b13faef1", "from_screen_id": "9e5e57c197243bd7", "action_id": "73624f471344", "to_screen_id": "1fe53c1fb4a39516", "success": true, "meta": {}}
+{"transition_id": "bb7bbce1c09795bd", "from_screen_id": "9e5e57c197243bd7", "action_id": "dc1734fbbc7c", "to_screen_id": "c633df7f73735048", "success": true, "meta": {}}
+{"transition_id": "55a3be507730dfff", "from_screen_id": "c4385aa4a9dc65c3", "action_id": "71c6ca2497e9", "to_screen_id": "0d6e77dcf08a68fa", "success": true, "meta": {}}
+{"transition_id": "4c70bb504871c3ff", "from_screen_id": "1fe53c1fb4a39516", "action_id": "13a9ac481d8c", "to_screen_id": "109b5782506b0531", "success": true, "meta": {}}
+{"transition_id": "68202291aaa2272e", "from_screen_id": "c633df7f73735048", "action_id": "74699e704f23", "to_screen_id": "0b3f0f768155c2c5", "success": true, "meta": {}}
+{"transition_id": "ebdff11cf0a95ad5", "from_screen_id": "9e5e57c197243bd7", "action_id": "6cc90a158414", "to_screen_id": "c4385aa4a9dc65c3", "success": true, "meta": {}}
+{"transition_id": "a7418669b13faef1", "from_screen_id": "9e5e57c197243bd7", "action_id": "73624f471344", "to_screen_id": "1fe53c1fb4a39516", "success": true, "meta": {}}
+{"transition_id": "bb7bbce1c09795bd", "from_screen_id": "9e5e57c197243bd7", "action_id": "dc1734fbbc7c", "to_screen_id": "c633df7f73735048", "success": true, "meta": {}}
+{"transition_id": "55a3be507730dfff", "from_screen_id": "c4385aa4a9dc65c3", "action_id": "71c6ca2497e9", "to_screen_id": "0d6e77dcf08a68fa", "success": true, "meta": {}}
+{"transition_id": "4c70bb504871c3ff", "from_screen_id": "1fe53c1fb4a39516", "action_id": "13a9ac481d8c", "to_screen_id": "109b5782506b0531", "success": true, "meta": {}}
+{"transition_id": "68202291aaa2272e", "from_screen_id": "c633df7f73735048", "action_id": "74699e704f23", "to_screen_id": "0b3f0f768155c2c5", "success": true, "meta": {}}

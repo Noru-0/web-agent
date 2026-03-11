@@ -2,24 +2,42 @@
   "tasks": [
     {
       "task_id": "task_1",
-      "name": "Add Items to Cart",
-      "description": "The user wants to select items they are interested in purchasing and add them to their shopping cart for later checkout.",
+      "name": "Adding Products to Cart",
+      "description": "User wants to add various products to their shopping cart for purchase.",
       "steps": [
         {
           "step_number": 1,
-          "description": "Navigate to the website's homepage.",
+          "description": "Navigate to the website homepage.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 2,
-          "description": "Browse or search for items of interest, such as 'Pre-baked Gingerbread House Kit Value Pack' or 'V8 +Energy, Healthy Energy Drink'.",
+          "description": "Browse or search for a specific product.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 3,
-          "description": "Click on the 'Add to Cart' button for each item they wish to purchase.",
+          "description": "Click on the product to view its details.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Choose any necessary options (size, color, quantity).",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 5,
+          "description": "Click the 'Add to Cart' button for the desired product.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 6,
+          "description": "Repeat steps 2-5 for additional products.",
           "screen_id": null,
           "action_id": null
         }
@@ -29,84 +47,36 @@
     },
     {
       "task_id": "task_2",
-      "name": "View Item Details",
-      "description": "The user wants to learn more about a product before deciding to add it to their cart.",
+      "name": "Creating an Account",
+      "description": "User wants to create a new account to track orders and save wish lists.",
       "steps": [
         {
           "step_number": 1,
-          "description": "Navigate to the website's homepage.",
+          "description": "Navigate to the website homepage.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 2,
-          "description": "Locate a product of interest, like 'Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion'.",
+          "description": "Click on 'Create an Account' link.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 3,
-          "description": "Click on the product card or 'View Details' link to see more information about the product.",
-          "screen_id": null,
-          "action_id": null
-        }
-      ],
-      "confidence": 1.0,
-      "category": "browse"
-    },
-    {
-      "task_id": "task_3",
-      "name": "Explore Product Categories",
-      "description": "The user wants to explore products within specific categories to find items they are interested in.",
-      "steps": [
-        {
-          "step_number": 1,
-          "description": "Navigate to the website's homepage.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 2,
-          "description": "Review the list of categories such as 'Beauty & Personal Care', 'Sports & Outdoors', and 'Electronics'.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 3,
-          "description": "Select a category to view all available products within that category.",
-          "screen_id": null,
-          "action_id": null
-        }
-      ],
-      "confidence": 1.0,
-      "category": "browse"
-    },
-    {
-      "task_id": "task_4",
-      "name": "Create an Account",
-      "description": "The user wants to create an account to manage their orders, wish list, and personal information more conveniently.",
-      "steps": [
-        {
-          "step_number": 1,
-          "description": "Navigate to the website's homepage.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 2,
-          "description": "Click on 'Create an Account' in the top navigation bar.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 3,
-          "description": "Fill out the registration form with personal details and preferences.",
+          "description": "Fill out the registration form with personal information.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 4,
-          "description": "Submit the form to create a new account.",
+          "description": "Submit the form.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 5,
+          "description": "Confirm the account creation through an email verification link.",
           "screen_id": null,
           "action_id": null
         }
@@ -115,31 +85,37 @@
       "category": "account"
     },
     {
-      "task_id": "task_5",
-      "name": "Search for Products",
-      "description": "The user wants to find specific products by using the search functionality.",
+      "task_id": "task_3",
+      "name": "Searching for Products",
+      "description": "User wants to find products by keyword search.",
       "steps": [
         {
           "step_number": 1,
-          "description": "Navigate to the website's homepage.",
+          "description": "Navigate to the website homepage.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 2,
-          "description": "Locate the 'Search' box, usually at the top of the page.",
+          "description": "Locate the search bar.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 3,
-          "description": "Type in a keyword or product name, such as 'Gingerbread House Kit' or 'Energy Drink'.",
+          "description": "Type a keyword or product name into the search bar.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 4,
-          "description": "Press Enter or click the search icon to view search results.",
+          "description": "Press Enter or click the search button.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 5,
+          "description": "Browse the search results.",
           "screen_id": null,
           "action_id": null
         }
@@ -148,37 +124,115 @@
       "category": "search"
     },
     {
-      "task_id": "task_6",
-      "name": "Manage Wish List",
-      "description": "The user wants to add items to their wish list for future reference or purchase.",
+      "task_id": "task_4",
+      "name": "Viewing Product Details",
+      "description": "User wants to view detailed information about a product, including price, ratings, and availability.",
       "steps": [
         {
           "step_number": 1,
-          "description": "Navigate to the website's homepage and sign in to the account.",
+          "description": "Navigate to the website homepage or search for a specific product.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 2,
-          "description": "Browse or search for items of interest.",
+          "description": "Click on the product from the search results or homepage showcase.",
           "screen_id": null,
           "action_id": null
         },
         {
           "step_number": 3,
-          "description": "On the product details page or from the product listing, select the option to 'Add to Wish List'.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 4,
-          "description": "Access 'My Wish List' from the account dashboard to view or manage the list.",
+          "description": "Review the product details on the product page.",
           "screen_id": null,
           "action_id": null
         }
       ],
       "confidence": 1.0,
-      "category": "account"
+      "category": "browse"
+    },
+    {
+      "task_id": "task_5",
+      "name": "Checking Out",
+      "description": "User wants to complete their purchase by checking out the items in their shopping cart.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Ensure you are signed into your account.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Navigate to 'My Cart' by clicking on the cart icon.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "Review the items in your cart and make any necessary adjustments (quantity, remove items).",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Click the 'Checkout' button.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 5,
+          "description": "Enter shipping and payment information.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 6,
+          "description": "Review the order summary.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 7,
+          "description": "Confirm the order.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "purchase"
+    },
+    {
+      "task_id": "task_6",
+      "name": "Adding Products to Wish List",
+      "description": "User wants to save products to a wish list for future purchase consideration.",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Navigate to the website and sign into your account.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 2,
+          "description": "Search or browse for a product.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 3,
+          "description": "On the product page, click the 'Add to Wish List' button.",
+          "screen_id": null,
+          "action_id": null
+        },
+        {
+          "step_number": 4,
+          "description": "Repeat steps 2-3 for additional products.",
+          "screen_id": null,
+          "action_id": null
+        }
+      ],
+      "confidence": 1.0,
+      "category": "content"
     }
   ],
   "metadata": {

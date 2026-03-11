@@ -207,7 +207,9 @@ async def run_exploration_cli(args):
     env = GenericWebEnv(
         start_url=args.url,
         headless=args.headless,
-        max_steps=args.max_steps
+        max_steps=args.max_steps,
+        screenshot_mode=args.screenshot_mode,
+        screenshot_dir=args.screenshot_dir
     )
 
     try:
@@ -395,6 +397,19 @@ Task Synthesis Methods:
         default="anthropic",
         choices=["anthropic", "openai"],
         help="LLM provider for task synthesis (default: anthropic). Requires --use-llm-synthesis"
+    )
+
+    parser.add_argument(
+        "--screenshot-mode",
+        default="base64_jpeg",
+        choices=["base64_jpeg", "base64_png", "png_file"],
+        help="Screenshot output mode (default: base64_jpeg). Use png_file to persist PNG files to disk."
+    )
+
+    parser.add_argument(
+        "--screenshot-dir",
+        default="data/raw/screenshots",
+        help="Directory for persisted PNG screenshots when --screenshot-mode png_file (default: data/raw/screenshots)"
     )
 
     args = parser.parse_args()

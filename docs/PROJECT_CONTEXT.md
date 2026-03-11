@@ -108,6 +108,23 @@ web-agent/
 
 ## 🔧 Recent Changes
 
+### March 11, 2026 - Phase 1 Vision Input Fix (Screenshot to LLM) ✅
+- **Fixed**: Phase 1 exploration now passes real screenshot data to the LLM screen analyzer
+  - `BrowserSession.snapshot()` now captures a compressed JPEG screenshot (base64)
+  - `GenericWebEnv.observe()` now includes `screenshot` in observation payload
+  - `ExplorationLoop._capture_screen()` now forwards screenshot to `ScreenAnalyzer.analyze_screen(...)`
+  - Exploration cache key now combines DOM hash + screenshot hash (prevents stale text-only cache hits)
+  - `ScreenAnalyzer` now sends multimodal requests (text + image) for OpenAI/Llama-compatible endpoints
+  - Added safe fallback to text-only analysis if multimodal call is unsupported by model/provider
+- **Additional fix**: Corrected analyzer fallback JSON keys to match parser contract (`screen_summary`, `semantic_actions`)
+- **Impact**: Screen understanding in Phase 1 now uses both DOM/text and visual context, reducing blind spots from text-only analysis
+- **Files Modified**:
+  - browser/session.py
+  - envs/generic_env.py
+  - exploration/exploration_bridge.py
+  - exploration/analyzer/screen_analyzer.py
+  - docs/PROJECT_CONTEXT.md
+
 ### March 4, 2026 - WebArena Test Results & Comprehensive Documentation ✅
 - **Created**: 4 comprehensive project reports documenting WebArena test (localhost:7770)
   - `docs/PROJECT_COMPREHENSIVE_REPORT.md` (25KB)

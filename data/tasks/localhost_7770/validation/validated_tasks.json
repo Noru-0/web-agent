@@ -28,33 +28,6 @@
       "category": "browse"
     },
     {
-      "task_id": "task_3",
-      "name": "Explore Product Categories",
-      "description": "The user wants to explore products within specific categories to find items they are interested in.",
-      "steps": [
-        {
-          "step_number": 1,
-          "description": "Navigate to the website's homepage.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 2,
-          "description": "Review the list of categories such as 'Beauty & Personal Care', 'Sports & Outdoors', and 'Electronics'.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 3,
-          "description": "Select a category to view all available products within that category.",
-          "screen_id": null,
-          "action_id": null
-        }
-      ],
-      "confidence": 1.0,
-      "category": "browse"
-    },
-    {
       "task_id": "task_6",
       "name": "Manage Wish List",
       "description": "The user wants to add items to their wish list for future reference or purchase.",
@@ -154,39 +127,6 @@
       "category": "browse"
     },
     {
-      "task_id": "task_9",
-      "name": "View Shopping Cart",
-      "description": "The user wants to check the contents of their shopping cart before proceeding to checkout.",
-      "steps": [
-        {
-          "step_number": 1,
-          "description": "Navigate to the website and add items to the cart as needed.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 2,
-          "description": "Click on 'My Cart' link in the header navigation.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 3,
-          "description": "Review the list of items, quantities, and total price in the shopping cart.",
-          "screen_id": null,
-          "action_id": null
-        },
-        {
-          "step_number": 4,
-          "description": "Make any adjustments to item quantities or remove items if needed.",
-          "screen_id": null,
-          "action_id": null
-        }
-      ],
-      "confidence": 0.9,
-      "category": "checkout"
-    },
-    {
       "task_id": "task_10",
       "name": "Apply Coupon Code",
       "description": "The user wants to apply a discount coupon code to their order to reduce the total purchase price.",
@@ -221,8 +161,8 @@
     }
   ],
   "metadata": {
-    "count": 7,
+    "count": 5,
     "phase": "Phase 3 - Task Validation",
-    "timestamp": "2026-03-04T08:30:04.734876"
+    "timestamp": "2026-03-11T11:53:24.387063"
   }
 }
